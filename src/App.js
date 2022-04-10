@@ -10,13 +10,13 @@ function App() {
 
 	const hasError = () => {
 		const requiredCourse = "calculus";
-		const userInput = [courseA, courseB, courseC];
+		const userInput = [courseA?.toLowerCase(), courseB?.toLowerCase(), courseC?.toLowerCase()];
 		return !userInput.includes(requiredCourse);
 	};
 
 	const handleSubmit = async (e) => {
-		setError("");
 		e.preventDefault();
+		setError("");
 		if (hasError()) {
 			setError("You must register for calculus course.");
 		} else {
