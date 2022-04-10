@@ -10,7 +10,7 @@ function App() {
 
 	const hasError = () => {
 		const requiredCourse = "calculus";
-		const userInput = [courseA, courseB, courseC];
+		const userInput = [courseA?.toLowerCase(), courseB?.toLowerCase(), courseC?.toLowerCase()];
 		return !userInput.includes(requiredCourse);
 	};
 
